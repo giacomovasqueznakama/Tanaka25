@@ -6,12 +6,7 @@ using System.Threading.Tasks;
 
 namespace Tanaka25
 {
-    internal class Program
+    internal class objetos
     {
-        static void Main(string[] args)
-        {
-            Menu menu = new Menu();
-            menu.Execute();
-        }
     }
 }
