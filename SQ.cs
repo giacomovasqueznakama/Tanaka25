@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace Tanaka25
 {
-    internal class SJL : Distritoss
+    internal class SQ: Distritoss
     {
-        public SJL() : base("Habla bien, ahora vives en el Gran San Juan de Lurigancho, suerte sobreviviendo bateriaaa", "Dificultad: Alarako")
+        public SQ() : base("No mano no vives en SQL, tas en tu vida promedio en Surquillo y asi como hermano del medio nadie te quiere pues eres promedio,suerte Causha", "Dificultad: Normal por que ya vives esa vida mediocre")
         {
         }
 
         public override void MostrarOpciones()
         {
-            Console.WriteLine("Como cualquier buen lunes amaneces todo rezaqueado");
+            Console.WriteLine("");
             Console.WriteLine("1.");
             Console.WriteLine("2.");
             Console.WriteLine("3.");

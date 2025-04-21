@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Tanaka25
 {
-    internal class Distritoss
+    public class Distritoss
     {
         public string Name;
         public string Diffilcuty;
