@@ -17,8 +17,11 @@ namespace Tanaka25
             bool continueFlag = true;
             while (continueFlag)
             {
-                Console.WriteLine("1.iniciar juego");
-                Console.WriteLine("0. Salir");
+                Console.WriteLine("Hola causa, se bienvenido a la top global aventura Peruana alaraka causa.");
+                Console.WriteLine(" En esta aventura tu podrá experimentar la top experiencia peruana con distintos finales dependiendo el distrito que eligas.");
+                Console.WriteLine(" Osea puedes ser un pitucazo o un bandido la decisión es tuya Gaaaaa.");
+                Console.WriteLine("1.Inicia ps delincuente");
+                Console.WriteLine("0. No das la talla para este juego");
 
                 string option = Console.ReadLine();
                 switch (option)
