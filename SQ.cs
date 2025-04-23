@@ -8,7 +8,7 @@ namespace Tanaka25
 {
     internal class SQ: Distritoss
     {
-        public SQ() : base("No mano no vives en SQL, tas en tu vida promedio en Surquillo y asi como hermano del medio nadie te quiere pues eres promedio,suerte Causha", "Dificultad: Normal por que ya vives esa vida mediocre")
+        public SQ() : base("Preparate mano para el aburrimiento, tas en tu vida promedio en Surquillo.Nadie te quiere pues eres promedio,suerte Causha", "Dificultad: Normal por que ya vives esa vida mediocre")
         {
         }
 

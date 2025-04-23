@@ -34,7 +34,14 @@ namespace Tanaka25
                     }
                 }
                 Console.WriteLine();
+
             }
+          
+        public void Add(string objetos)
+        {
+            ObjetosInventario.Add(objetos);
+        }
+
         }
     }
 
