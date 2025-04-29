@@ -122,6 +122,44 @@ namespace Tanaka25
                 }
             }
         }
+        public void Inicio2(int opcion)
+        {
+            if (distritoActual is SQ)
+            {
+                SQ SQ = new SQ();
+                switch (opcion)
+                {
+                    case 1:
+                        Console.Clear();
+                        Console.WriteLine("Pides tu INDRIVER, ya que pa eso nomas te alcansa");
+                        Console.WriteLine("Mientras estas de camino a tu uni notas la vida peruana, poco a poco ves a las personas pasar");
+                        Console.WriteLine("De pronto vez a la chica mas hermosa que has visto rn tu vida, tu no lo puedes creer de lo linda que esta y no sabes que hacer");
+                        Console.WriteLine("Se te para el corazon pero sientes que el destino a preparado este momento para ti toda tu vida te arrepentiras si no haces algo");
+                        SQ.MostrarOpciones1();
+                        ProcesadorSQ1();
+                        break;
+                    case 2:
+                        Console.Clear();
+                        Console.WriteLine("Sales de tu casa corriendo para tomar tu micro");
+                        Console.WriteLine("mientras esperas notas que hay alguien raro entre las personas");
+                        Console.WriteLine("No inetantas prestarle atencion y te subes al micro");
+                        SQ.MostrarOpciones2();
+                        ProcesadorSQ2();
+                        break;
+                    case 3:
+                        Console.Clear();
+                        Console.WriteLine("Inicias tu aventura, estas a 10 cuadras de tu uni, con un tiempo limitado extremo pero tu tienes la fe del caso.");
+                        Console.WriteLine("Caminas atravez de tu Perú querido, la calle lena de trabajadores que no son coimeados, carros que hacen el aire lo mas toxico de todos y 1 sol abrazador que ilumina la triste vida que tienes");
+                        Console.WriteLine("A pesar de ello aun estas en una carrera contra el tiempo, debes tomar 1 atajo para intentar llegar antes");
+                        SQ.MostrarOpciones3();
+                        ProcesadorSQ3();
+                        break;
+                    default:
+                        Console.WriteLine("Opcion invalida");
+                        break;
+                }
+            }
+        }
         private void Ruta1()
         {
             Console.WriteLine(distritoActual.Name);
@@ -166,8 +204,34 @@ namespace Tanaka25
 
             Console.WriteLine("Elige una opcion (1-3): ");
             string option = Console.ReadLine();
+            int opcion;
+            if (int.TryParse(option, out opcion) && opcion >= 1 && opcion <= 3)
+            {
+                switch (opcion)
+                {
+                    case 1:
+                        objetosInventario.Add("a");
+                        break;
+                    case 2:
+                        objetosInventario.Add("a");
+                        break;
+                    case 3:
+                        objetosInventario.Add("a");
+                        break;
+                }
 
+                objetosInventario.MostrarObjetos();
+
+                Inicio2(opcion);
+            }
+            else
+            {
+                Console.WriteLine("Opcion no valida");
+
+                Ruta2();
+            }
         }
+        
         private void Ruta3()
         {
             Console.WriteLine(distritoActual.Name);
@@ -176,7 +240,34 @@ namespace Tanaka25
 
             Console.WriteLine("Elige una opcion (1-3): ");
             string option = Console.ReadLine();
+            int opcion;
+            if (int.TryParse(option, out opcion) && opcion >= 1 && opcion <= 3)
+            {
+                switch (opcion)
+                {
+                    case 1:
+                        objetosInventario.Add("a");
+                        break;
+                    case 2:
+                        objetosInventario.Add("b");
+                        break;
+                    case 3:
+                        objetosInventario.Add("c");
+                        break;
+                }
+
+                objetosInventario.MostrarObjetos();
+
+                Inicio(opcion);
+            }
+            else
+            {
+                Console.WriteLine("Opcion no valida");
+
+                Ruta3();
+            }
         }
+        
 
         public void ProcesadorSJL1 ()
         {
@@ -250,6 +341,81 @@ namespace Tanaka25
                 default:
                     Console.WriteLine("Opcion no valida");
                     ProcesadorSJL3();
+                    break;
+            }
+        }
+        public void ProcesadorSQ1()
+        {
+            Console.WriteLine("Elige una opcion (1-3): ");
+            string opcion = Console.ReadLine();
+
+            switch (opcion)
+            {
+                case "1":
+                    Console.WriteLine("Sales corriendo y la ves defrente, era tan hermosa como la viste y sin esperar mas le hablas, tras años de lindos momentos se casan y viven felices, lo hicise bien muchacho");
+                    Console.ReadKey();
+                    break;
+                case "2":
+                    Console.WriteLine("Ves una luz intensa mientras te elevas en los aires hasta que llegas a cielo, al parecer saltar de 1 carro en movimiento no fue la mejor de tus ideas ya que ni bien saliste te estampaste la cara contra el suelo, suerte para la proxima amigo");
+                    Console.ReadLine();
+                    break;
+                case "3":
+                    Console.WriteLine("Pasas años estudiando y sin haber podido amar denuevo, llegas a tener una empresa multimillonaria pero termina quebrando asi como ru corazon que esta hecho pesazos te sumes en la depresion y terminas chambeando en al tolouse");
+                    Console.ReadLine();
+                    break;
+                default:
+                    Console.WriteLine("Opcion no valida");
+                    ProcesadorSQ1();
+                    break;
+            }
+        }
+        public void ProcesadorSQ2()
+        {
+            Console.WriteLine("Elige una opcion (1-3): ");
+            string opcion = Console.ReadLine();
+
+            switch (opcion)
+            {
+                case "1":
+                    Console.WriteLine("Ni bien lo ves acercandose te tiras al piso haciendote el morido, no das tiempo a pensar al choro cuando se tira donde estas e intenta darte respiracion boca a boca para intentar salvarte, no es algo que te enorgullescas pero al menos detuviste el asalto, la gente nunca lo olvidara");
+                    Console.ReadKey();
+                    break;
+                case "2":
+                    Console.WriteLine("Recuerdas todos los animes que has visto hasta ahora y te armas de valor para atacarlo. Cargas contra el pero la combi seguia en movimiento y terminas perdiendo el equilibrio y callendo sobre el, para tu suerte lo noqueaste y terminas siendo el heroe que siempre quisiste ser, ese día no te cobraron el pasaje");
+                    Console.ReadLine();
+                    break;
+                case "3":
+                    Console.WriteLine("Te acercas firmemente al ladron tranquilo y con una vos tranquila le dices: escuchame, por que haces esto, no debes atacar a la gente, a quien quieres hacerle daño, por que, escuchame bien ladron-kun, tu no tienes enemigos, nadie tiene enemigos, nadie en este mundo merece ser lastimado. Tus palabras resuenan en la cabeza de todos los presentes los cuales deciden olvidar ese momento y mejorar como personas, nadie tiene enemigos y tu perdiste tu día de clases ya que hasta el conductor quiso ir a reflexionar despues de eso");
+                    Console.ReadLine();
+                    break;
+                default:
+                    Console.WriteLine("Opcion no valida");
+                    ProcesadorSQ2();
+                    break;
+            }
+        }
+        public void ProcesadorSQ3()
+        {
+            Console.WriteLine("Elige una opcion (1-3): ");
+            string opcion = Console.ReadLine();
+
+            switch (opcion)
+            {
+                case "1":
+                    Console.WriteLine("Tras caminar 1 poco decides aumentar la velocidad, al poco tiempo te das cuenta que estas corriendo pero algo era raro, la velocidad que tenias era cada vez mayor, era soprendente poco a poco  veias como los demas a tu alrededor se relentizaban y al poco tiempo llegas a tu uni. La experiencia fue increible lo malo es que tu corazon se detuvo tras alcanzar tu destino, no combinen Monster con retbull y mas si tienes problemas al corazon ");
+                    Console.ReadKey();
+                    break;
+                case "2":
+                    Console.WriteLine("Decides ir por un camino alterno con la esperanza de acortar camino, poco a poco te vas alejando de los lugares que conoces y cuando te das cuenta te encuentras totalmente solo. No piensas que es malo hasta que vez en medio de la calle a 1 sola persona que te mira, intentas pensar que no pasa nada pero esta se te acerca y cuando esta cerca de ti........Te invita a ser tu propio jefe, era un recluta de una empresa que busca pagarte millones y en tu falta de criterio aceptas unite a esta estafa piramidal que no solo acaba contigo si no con toda la economia de tu familia, deberias haber buscado un trabajo de verdad ");
+                    Console.ReadLine();
+                    break;
+                case "3":
+                    Console.WriteLine("Rapidamente sacas tu telefono y llamas a la real gang, en otras palabras a la bola de imbeciles a los que llamas amigos, sin perder el tiempo le explicas la situacion a tus amigos con la esperanza de que te den una solucion. Lamentablemente el mundo tenia otros planes ya que lo unico que te dijeron fue que faltas y vayas con ellos a pasear, no era algo que esperabas pero tereminas aceptando y pasando un buen tiempo, no te preocupes yo tambien hubiera hecho lo mismo");
+                    Console.ReadLine();
+                    break;
+                default:
+                    Console.WriteLine("Opcion no valida");
+                    ProcesadorSQ3();
                     break;
             }
         }
