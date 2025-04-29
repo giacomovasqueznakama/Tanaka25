@@ -54,7 +54,7 @@ namespace Tanaka25
 
                     }
                 }
-              
+
             }
         }
         private void startGame()
@@ -84,21 +84,21 @@ namespace Tanaka25
                     break;
             }
         }
-            public void Inicio(int opcion)
+        public void Inicio(int opcion)
         {
             if (distritoActual is SJL)
             {
                 SJL sJL = new SJL();
-                switch(opcion)
+                switch (opcion)
                 {
                     case 1:
-                        Console.Clear();                      
+                        Console.Clear();
                         Console.WriteLine("Caminas por las calles debastadas por la delincuencia y el bandalismo, cuando te encuentras con tu amigo Brayan, el cual te propone ir a conseguir de forma gratis algo de desayunar");
                         Console.WriteLine("Lo piensas por unos momentos pero te ves interrumpido por una llamada, es tu flaquita la kimverly, a pesar de que la bandida esa estuvo contigo en la borrachera de anoche se fue con unos patas que conocio ese mismo día");
                         Console.WriteLine("Al contestar escuchas de que tu flaca te pide ayuda pues no sabe donde se encuentra y te dispones a encontrarla, corres a tu casa  agarras tu mototaxi y te dispones a ir a buscarla ");
                         Console.WriteLine("Tu puedes cholo, anda recupera a tu bandida antes que sea demaciado tarde");
                         sJL.MostrarOpciones1();
-                        ProcesadorSJL1(); 
+                        ProcesadorSJL1();
                         break;
                     case 2:
                         Console.Clear();
@@ -118,7 +118,7 @@ namespace Tanaka25
                         break;
                     default:
                         Console.WriteLine("Opcion invalida");
-                        break;                     
+                        break;
                 }
             }
         }
@@ -153,6 +153,43 @@ namespace Tanaka25
                         Console.WriteLine("A pesar de ello aun estas en una carrera contra el tiempo, debes tomar 1 atajo para intentar llegar antes");
                         SQ.MostrarOpciones3();
                         ProcesadorSQ3();
+                        break;
+                    default:
+                        Console.WriteLine("Opcion invalida");
+                        break;
+                }
+            }
+        }
+        public void Inicio3(int opcion)
+        {
+            if (distritoActual is MF)
+            {
+                MF MF = new MF();
+                switch (opcion)
+                {
+                    case 1:
+                        Console.Clear();
+                        Console.WriteLine("Te vas a tu jato en la play a disfrutar las olas, donde tu familia suele ir a vacasionar tu vas cada fin de semana");
+                        Console.WriteLine("Caminas chill entre la playa, y no sabes que hacer, tus brothers dicen que quieren ir pero tu quieres sacar un plan de imprevisto");
+                        Console.WriteLine("sigues hasta que te das cuenta de que hay 1 concierto, 1 yate y 1 Arabe en distintos lugares pero cerca de donde estas");
+                        MF.MostrarOpciones1();
+                        ProcesadorMF1();
+                        break;
+                    case 2:
+                        Console.Clear();
+                        Console.WriteLine("Decides agarrar uno de los coches deportidos de coleccion de tu viejo ");
+                        Console.WriteLine("Conduces pisando el acelerador a fondo sin pensar en las consecuencias");
+                        Console.WriteLine("Lo unico que quieres es demostrar tu poder adquisitivo presumiendoselo al mundo");
+                        MF.MostrarOpciones2();
+                        ProcesadorMF2();
+                        break;
+                    case 3:
+                        Console.Clear();
+                        Console.WriteLine("Durante el día decides perder el tiempo en actividades recreativas sencillas");
+                        Console.WriteLine("Jugar tennis, alimentar a tu tigre de vengala, saltar en paracaidas, lo tipico de 1 lunes");
+                        Console.WriteLine("Todo el día va bien hasta que por fin cayo la noche, y tu estas listo para la fiesta");
+                        MF.MostrarOpciones3();
+                        ProcesadorMF3();
                         break;
                     default:
                         Console.WriteLine("Opcion invalida");
@@ -231,7 +268,7 @@ namespace Tanaka25
                 Ruta2();
             }
         }
-        
+
         private void Ruta3()
         {
             Console.WriteLine(distritoActual.Name);
@@ -258,7 +295,7 @@ namespace Tanaka25
 
                 objetosInventario.MostrarObjetos();
 
-                Inicio(opcion);
+                Inicio3(opcion);
             }
             else
             {
@@ -267,9 +304,9 @@ namespace Tanaka25
                 Ruta3();
             }
         }
-        
 
-        public void ProcesadorSJL1 ()
+
+        public void ProcesadorSJL1()
         {
             Console.WriteLine("Elige una opcion (1-3): ");
             string opcion = Console.ReadLine();
@@ -419,8 +456,86 @@ namespace Tanaka25
                     break;
             }
         }
+        public void ProcesadorMF1()
+        {
+            Console.WriteLine("Elige una opcion (1-3): ");
+            string opcion = Console.ReadLine();
+
+            switch (opcion)
+            {
+                case "1":
+                    Console.WriteLine("Optas por ir a disffrutar del concierto, pero al intentar ingresar la seguridad te detiene, intentas de diversos medio entrar hasta que recurres a la violencia lo cual ocasiona que seas llevado a una comisaria y que tu familia se decepcione de ti y te deseherede");
+                    Console.ReadKey();
+                    break;
+                case "2":
+                    Console.WriteLine("Hablas con los dueños para que te permitan unirte, haran una fiesta en medio del mar donde disfrutas todo el día, lamentablemente el yate se pierde en medio de una tormenta y quedas varado en una isla desierta. tras 3 años de supervivencia eres rescatado e inicias una nueva vida ahora mas honrrada");
+                    Console.ReadLine();
+                    break;
+                case "3":
+                    Console.WriteLine("Tu y el Arabe se hacen amigos y te habla de que vayan a Dubai a su casa para que disfruten del los gozos de por alla, tu aceptas y disfrutas de la experiencia ganando un gran amigo que tendras para desperdiciar mas dinero.");
+                    Console.ReadLine();
+                    break;
+                default:
+                    Console.WriteLine("Opcion no valida");
+                    ProcesadorMF1();
+                    break;
+            }
+        }
+        public void ProcesadorMF2()
+        {
+            Console.WriteLine("Elige una opcion (1-3): ");
+            string opcion = Console.ReadLine();
+
+            switch (opcion)
+            {
+                case "1":
+                    Console.WriteLine("Decides manejar hasta que observas a 1 grupo de chicas las cuales quedan fasinadas por tu carrazo, decides pasar un buen tiempo con ellas hasta que unos meses mas tarde terminas siendo padre de 5 niños, los bebes son una vendicion, y al menos tu puedes mantener a 5 de ellos");
+                    Console.ReadKey();
+                    break;
+                case "2":
+                    Console.WriteLine("Pisas el acelerador hasta que te das cuenta que la adrenalida que sientes es lo que realmente te gusta, te sientes imparable, un velocista total, todo estaba bien hasta que chocas. Una vez mas destruyes un auto de tu padre, con este ya son 6 que van al mes, a este paso bajaran tu mesaja de 100k a 50k");
+                    Console.ReadLine();
+                    break;
+                case "3":
+                    Console.WriteLine("Teniendo el conocimiento de que tu padre no iba a darte la herencia familiar a ti por el mal hijo que eres, lanzas tu carro por 1 barranco y finges tu muerte, esperas 10 años hasta que tu padre fallece y te presentas para reclamar la herencia. No obstante al parecer tu padre es igual que tu y tambien fingio su muerte esperando que asi te reveles, en fin cosas de gente con plata");
+                    Console.ReadLine();
+                    break;
+                default:
+                    Console.WriteLine("Opcion no valida");
+                    ProcesadorMF2();
+                    break;
+            }
+        }
+        public void ProcesadorMF3()
+        {
+            Console.WriteLine("Elige una opcion (1-3): ");
+            string opcion = Console.ReadLine();
+
+            switch (opcion)
+            {
+                case "1":
+                    Console.WriteLine("Claramente el auto control no es un concepto que entiendes, ni bien legaste empezaste a pagar cantidades increibles de alcohol a todo aquel que se te acercaba y claro que como peruanos no iban a desaprobechar. Lo bueno es que hiciste muchos amigos y la pasaste mal, lo malo es que tiene una deuda que ocaciono que embargaran 1 de las 5 casa que tienes, tu descontrol no tiene reparo");
+                    Console.ReadKey();
+                    break;
+                case "2":
+                    Console.WriteLine("Tus amigos te saludan con cariño, hablan de como les a ido y que cosas haranen la noche, todo hasta que llega una chica al grupo. A partir de alle se vuelve una batalla campal de quien puede tener una oportunidad con ella, algo que tu ganaste tras impresionarla con tus dotes monetarios. Fue una victoria aplastante hasta que descubriste que en verdad era un hombre que queria engañarte y robarte la plata, fuiste la burla del grupo y de muchos durante años ");
+                    Console.ReadLine();
+                    break;
+                case "3":
+                    Console.WriteLine("No se por que, cosas de ricos supongo pero la discoteca que ibas tenia 1 casino, el juego no era lo tuyo pero quisiste experimentar algo nuevo. Te acercas a un juego y apuestas la humilde cantidad de Medio Millon de soles al rojo, la gente enloquese al ver tal auesta y mas tu que realemnte era casi gran parte de la plata que tenian para otros gastos. Empieza a girar la ruleta y la tension inicia, la gente mira con asombro y desdicha si lo lograras, es solo un 50/50 peor aun asi ariesgaste todo, era muy tarde para retroceder y al final la ruleta se detiene y terminas ganando todo, las mejores apuestas siempre se hacen a lo grande");
+                    Console.ReadLine();
+                    break;
+                default:
+                    Console.WriteLine("Opcion no valida");
+                    ProcesadorMF3();
+                    break;
+            }
+        }
     }
 }
+
+
+
 
         
 
