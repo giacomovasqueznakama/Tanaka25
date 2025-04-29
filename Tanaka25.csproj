@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Distritoss.cs" />
+    <Compile Include="IOpciones.cs" />
     <Compile Include="Menu.cs" />
     <Compile Include="MF.cs" />
     <Compile Include="objetos.cs" />

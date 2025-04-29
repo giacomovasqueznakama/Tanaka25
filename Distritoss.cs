@@ -6,21 +6,24 @@ using System.Threading.Tasks;
 
 namespace Tanaka25
 {
-    public class Distritoss
+    public abstract class Distritoss
     {
-        public string Name;
-        public string Diffilcuty;
+        public string Name { get; protected set; }
+        public string Diffilcuty { get; protected set; }
+
         public Distritoss(string name, string diffilcuty)
         {
             this.Name = name;
             this.Diffilcuty = diffilcuty;
         }
-        public virtual void MostrarOpciones()
+
+        public abstract void MostrarOpciones();
+
+        public virtual void MostrarIntroduccion()
         {
             Console.WriteLine($"Tu vida inicio en {Name}");
             Console.WriteLine(Diffilcuty);
         }
-      
     }
 }
 
